@@ -6,6 +6,7 @@
   <title>💖 Valentine Website</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -308,6 +309,75 @@
   border-radius: 18px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
+/* ===== ULTRA CUTE VALENTINE KITTIES ===== */
+
+.kitty-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.kitty {
+  font-size: 3rem;
+  animation: kittyBounce 1.8s ease-in-out infinite;
+}
+
+.kitty.left {
+  animation-delay: 0s;
+}
+
+.kitty.right {
+  animation-delay: 0.9s;
+}
+
+.kitty-text {
+  text-align: center;
+}
+
+.kitty-title {
+  font-family: 'Allura', cursive;
+  font-size: 3.4rem;
+  color: #b1123a;
+  text-shadow:
+    0 4px 14px rgba(0,0,0,0.45),
+    0 0 10px rgba(255, 90, 120, 0.4);
+  position: relative;
+}
+
+/* floating hearts above text */
+.kitty-title::after {
+  content: "💖 💕 💖";
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 4px;
+  animation: heartFloat 2.5s ease-in-out infinite;
+}
+
+.kitty-wish {
+  margin-top: 6px;
+  font-size: 1.1rem;
+  color: #fff;
+  opacity: 0.95;
+  animation: wishPulse 3s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes kittyBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(4deg); }
+}
+
+@keyframes heartFloat {
+  0%, 100% { opacity: 0.6; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-6px); }
+}
+
+@keyframes wishPulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
 
   </style>
 </head>
@@ -315,23 +385,37 @@
 <body>
 
   <header>
-    <h1>❤️ Jishnu & Darsana ❤️</h1>
-    <p>💕</p>
+    <div class="kitty-wrapper">
+  <div class="kitty left">🐱💗</div>
+
+  <div class="kitty-text">
+    <div class="kitty-title">Welcome Boss</div>
+    <div class="kitty-wish">Self Proclaimed Cutie-pie</div>
+  </div>
+
+  <div class="kitty right">💗🐱</div>
+</div>
+
+      
   </header>
 
   <section class="glass love-letter">
-    <h2>❤️</h2>
-    <p>
-      My Dear <b>Piku</b>, <br><br>
-      Thank you for being part of my life 💕  
-      <br><br>
-      You are my happiness, my safe place, and my forever. 🌹✨  
-      <br><br>
-      Forever Yours, <br>
-      <b>Jishnu</b>
-    </p>
+    <p style="
+  font-family: 'Pacifico', cursive;
+  color: #ff4d6d;
+  font-size: 1.25rem;
+  line-height: 2.1;
+  text-align: center;
+  text-shadow: 0 3px 10px rgba(255, 77, 109, 0.45);
+">
+  My Dear Piku, 
+  <br>
+  Thank you for being part of my life 🥰
+  </span>
+</p>
+
+
       <section class="glass">
-  <h2>Photos</h2>
 
   <div class="photo-carousel">
     <div class="photo-track" id="photoTrack">
@@ -346,7 +430,6 @@
   </section>
 
   <section class="glass">
-    <h2>📸 Our Memories</h2>
     <div class="gallery">
         <img src="1.jpg">
         <img src="3.jpg">
@@ -357,7 +440,20 @@
 
   <section class="glass">
     <div class="question-container" id="questionBox">
-      <h2> Will You Be My Valentine ?</h2>
+
+<h2 style="
+  font-family: 'Allura', cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #b1123a;
+  text-align: center;
+  text-shadow:
+    0 4px 16px rgba(0,0,0,0.45),
+    0 0 10px rgba(255, 90, 120, 0.35);
+">
+  Will you be my Valentine?
+</h2>
 
       <div class="valentine-btns" id="btnArea">
         <button class="btn" id="yesBtn" onclick="yesValentine()">Yes 💖</button>
@@ -374,12 +470,22 @@
   <div class="popup" id="lovePopup">
     <div class="popup-box">
       <img class="popup-img" src="2.jpg" alt="Couple Photo">
-      <h2>My Valentine 💖</h2>
-      <p>
-        Hi hi hi, you are in my genjutsu 😈<br><br>
-        From today, you are officially my Bhadha 🌹✨<br>
-        Love you to the moon 🌜 and back ❤️ . 
-      </p>
+      <h2>YES <br>Adichathil nanni undee !!! 💖</h2>
+      <p style="
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  line-height: 1.9;
+  color: #ffe3ec;
+  text-align: center;
+  text-shadow: 
+    0 2px 8px rgba(255, 77, 109, 0.6),
+    0 0 18px rgba(255, 77, 109, 0.35);
+">
+  Hi hi hi, you are in my genjutsu 😈<br>
+  From today, you are officially my Bhadha 🌹✨<br>
+  Love you to the moon 🌜 and back ❤️
+</p>
+
       <button class="popup-close" onclick="closeLovePopup()">Aww Okay 🥺💞</button>
     </div>
   </div>
@@ -450,7 +556,7 @@
       document.getElementById("yesBtn").classList.add("yes-glow");
       launchConfetti();
       heartsExplosion();
-      typeMessage("YAYYYY 😍💖 I LOVE YOU FOREVER 💞🌹✨", "valentineMsg", 55);
+      typeMessage(" Nammal jaichu guyss !!! 😎😎", "valentineMsg", 55);
 
       setTimeout(() => {
         document.getElementById("noBtn").style.display = "none";
